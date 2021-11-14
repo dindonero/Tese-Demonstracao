@@ -1,0 +1,15 @@
+name: "Run SmartBugs static analysis on this repository"
+
+# Specify when the workflow is run
+on:
+  push:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run SmartBugs Static Analysis
+      uses: dindonero/smartbugs-static-analysis@v1.0
+      with:
+        # Specify the tools to be executed
+        tool: 'conkas oyente'
